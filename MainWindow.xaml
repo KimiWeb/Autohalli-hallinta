@@ -1,0 +1,55 @@
+<Window x:Class="AutoliikeXMLharjoitus1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoliikeXMLharjoitus1"
+        mc:Ignorable="d"
+     Title="Autot XML-tiedostosta" Height="650" Width="600">
+    <Grid Margin="0,0,-99,-81">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="28" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lstAutojenID" 
+                 Grid.Row="1" Grid.Column="0"
+                 VerticalAlignment="Top" Margin="7"
+                 Height="300" Width="80" SelectionChanged="lstAutojenID_SelectionChanged"/>
+        <StackPanel  Grid.Row="1" Grid.Column="1" Margin="0,0,-297,0">
+
+            <Label x:Name="lblMerkki" Margin="10,7,256,7"
+               Height="50" Background="#FFCBF3F2" />
+            <Label x:Name="lblMalli" Margin="10,7,256,7"
+               Height="50" Background="#FFCBF3F2" />
+            <Label x:Name="lblRekisterinumero" Margin="10,7,256,7"
+               Height="50" Background="#FFCBF3F2" />
+            <Label x:Name="lblValmistusvuosi" Margin="10,7,256,7"
+               Height="50" Background="#FFCBF3F2" />
+            <RadioButton x:Name="rdbHuollettu"
+                         Height="20"
+                         Content="Huollettu"
+                         Margin="10,7,256,7"/>
+            <RadioButton x:Name="rdbEiHuollettu"
+                         Height="20"
+                         Content="Ei huollettu"
+                         Margin="10,7,256,7"/>
+            <Label x:Name="lblHinta" Margin="10,7,256,7"
+               Height="50" Background="#FFCBF3F2" />
+        </StackPanel>
+        <Image x:Name="ImgLogo" 
+               VerticalAlignment="Top"
+               Height="185"
+               Grid.Row="1" Grid.Column="1"
+               Margin="252,10,-274,0" Stretch="Fill" Source="Autoveijarit.png"/>
+        <Image x:Name="ImgAuto" 
+               VerticalAlignment="Top"
+               Height="148"
+               Grid.Row="1" Grid.Column="1"
+               Margin="252,228,-274,0" Stretch="Fill"/>
+    </Grid>
+</Window>
